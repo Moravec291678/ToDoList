@@ -1,0 +1,106 @@
+@font-face {
+    font-family: ambitsek;
+    src: url(fonts/ambitsek.ttf);
+}
+
+
+html,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(180deg, rgba(101,101,102,1) 0%, rgba(42,42,48,1) 69%, rgba(18,18,18,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.container {
+    width: 700px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.title {
+    color: #8d5d8a;
+    text-shadow: #1d1717 2px 2px 4px;
+    font-family: ambitsek;
+}
+
+.headerTitle {
+    font-size: 32px ;
+    margin-bottom: 15px;
+}
+
+.headerForm {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.headerInput {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #423a3a;
+    padding: 8px 15px 12px;
+    font-size: 14px;
+    color: #8d5d8a;
+    font-family: ambitsek;
+    margin-bottom: 25px;
+}
+
+.headerInput::placeholder {
+    font-size: 14px;
+    color: #6a6969;
+}
+
+.addTaskPushable {
+    background: hsl(303, 100%, 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    width: 130px;
+    height: 40px;
+    transform: translateY(5px);
+}
+
+.addTask {
+    display: block;
+    width: 130px;
+    text-align: center;
+    padding: 13px 5px;
+    height: 40px;
+    border-radius: 12px;
+    background: hsl(301, 47%, 54%);
+    color: rgb(255, 255, 255, .7);
+    transform: translateY(-6px);
+    font-size: 12px;
+    font-family: ambitsek;
+}
+
+.addTaskPushable:active .addTask {
+    transform: translateY(-2px);
+  }
+
+
+
+
+.mainTitle {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+
+
+
+.controlBtn {
+    height: 20px;
+    width: 20px;
+}
