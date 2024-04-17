@@ -1,106 +1,176 @@
 @font-face {
-    font-family: ambitsek;
-    src: url(fonts/ambitsek.ttf);
+  font-family: ambitsek;
+  src: url(fonts/ambitsek.ttf);
 }
 
 
 html,
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
 body {
-    background: linear-gradient(180deg, rgba(101,101,102,1) 0%, rgba(42,42,48,1) 69%, rgba(18,18,18,1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    padding: 100px 0;
+  background: linear-gradient(180deg, rgba(101, 101, 102, 1) 0%, rgba(42, 42, 48, 1) 69%, rgba(18, 18, 18, 1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 100px 0;
 }
 
 .container {
-    width: 700px;
-    padding: 0px 10px;
-    margin: 0 auto;
+  width: 700px;
+  padding: 0px 10px;
+  margin: 0 auto;
 }
 
 .title {
-    color: #8d5d8a;
-    text-shadow: #1d1717 2px 2px 4px;
-    font-family: ambitsek;
+  color: #fc83f4;
+  text-shadow: #1d1717 2px 2px 4px;
+  font-family: ambitsek;
 }
 
 .headerTitle {
-    font-size: 32px ;
-    margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 .headerForm {
-    width: 100%;
-    display: flex;
-    gap: 15px;
+  width: 100%;
+  display: flex;
+  gap: 15px;
 }
 
 .headerInput {
-    width: 100%;
-    border-radius: 10px;
-    background-color: #423a3a;
-    padding: 8px 15px 12px;
-    font-size: 14px;
-    color: #8d5d8a;
-    font-family: ambitsek;
-    margin-bottom: 25px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #423a3a;
+  padding: 8px 15px 12px;
+  font-size: 14px;
+  color: #ca66fc;
+  font-family: ambitsek;
+  margin-bottom: 25px;
 }
 
 .headerInput::placeholder {
-    font-size: 14px;
-    color: #6a6969;
+  font-size: 14px;
+  color: #6a6969;
 }
 
 .addTaskPushable {
-    background: hsl(303, 100%, 32%);
-    border-radius: 12px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-    width: 130px;
-    height: 40px;
-    transform: translateY(5px);
+  background: hsl(303, 100%, 32%);
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  width: 130px;
+  height: 40px;
+  transform: translateY(5px);
 }
 
 .addTask {
-    display: block;
-    width: 130px;
-    text-align: center;
-    padding: 13px 5px;
-    height: 40px;
-    border-radius: 12px;
-    background: hsl(301, 47%, 54%);
-    color: rgb(255, 255, 255, .7);
-    transform: translateY(-6px);
-    font-size: 12px;
-    font-family: ambitsek;
+  display: block;
+  width: 130px;
+  text-align: center;
+  padding: 13px 5px;
+  height: 40px;
+  border-radius: 12px;
+  background: hsl(301, 47%, 54%);
+  color: rgb(255, 255, 255, .7);
+  transform: translateY(-6px);
+  font-size: 12px;
+  font-family: ambitsek;
 }
 
 .addTaskPushable:active .addTask {
-    transform: translateY(-2px);
-  }
-
-
-
+  transform: translateY(-2px);
+}
 
 .mainTitle {
-    font-size: 22px;
-    margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.task {
+  font-family: ambitsek;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #423a3a;
+  border-radius: 5px;
+
+}
+
+.tasks .task .content .text {
+  transition: all .3s;
+}
+
+.tasks .task .content .text:not(:read-only) {
+  color: #66fcde;
+}
+
+.content {
+  flex: 1 1 0%;
+}
+
+.content input {
+  font-family: ambitsek;
+  width: fit-content;
+  align-items: center;
+  background-color: #423a3a;
+  color: #ca66fc;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  outline: transparent;
+}
+
+.actions {
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  transition: all .4s;
+  background-color: transparent;
+  border: none;
+}
+
+.edit {
+  background-image: url(img/edit.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  transition: all .3s;
+  margin: 0;
+}
+
+.edit:hover {
+  scale: 1.04;
 }
 
 
+.delete {
+  background-image: url(img/remove.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  transition: all .3s;
+}
 
-
-.controlBtn {
-    height: 20px;
-    width: 20px;
+.delete:hover {
+  scale: 1.04;
 }
