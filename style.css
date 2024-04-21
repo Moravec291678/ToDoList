@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  width: 700px;
+  max-width: 700px;
   padding: 0px 10px;
   margin: 0 auto;
 }
@@ -173,4 +173,37 @@ button {
 
 .delete:hover {
   scale: 1.04;
+}
+
+@media (max-width: 480px) {
+  .headerTitle {
+    font-size: 24px;
+  }
+  .mainTitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 390px) {
+  .headerForm {
+    flex-direction: column
+  }
+  .headerInput {
+    margin-bottom: 10px;
+  }
+
+  .headerForm {
+    align-items: center;
+  }
+  .addTaskPushable {
+    margin-bottom: 20px;
+  }
+
+    .headerTitle {
+      font-size: 20px;
+    }
+  
+    .mainTitle {
+      font-size: 14px;
+    }
 }
